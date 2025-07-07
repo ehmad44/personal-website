@@ -111,21 +111,34 @@ footer h2 {
   margin-bottom: 20px;
 }
 
+.hero {.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+}
+
 .social-links a {
-  margin: 0 10px;
-  padding: 10px 15px;
-  text-decoration: none;
-  background-color: #007BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 300px;
+  padding: 12px 20px;
+  background-color: #007bff;
   color: white;
-  border-radius: 8px;
-  display: inline-block;
-  transition: background 0.3s ease;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .social-links a:hover {
   background-color: #0056b3;
 }
-.hero {
+
   background-image: url('herotopbackground.jpg.jpg');
   background-size: cover;
   background-position: center;
