@@ -84,6 +84,15 @@ Web Learner • Aspiring Developer • Crypto Enthusiast</p>
 </div>
 
 </footer>
+
+<div class="contact-container">
+  <button onclick="toggleContactOptions()" class="contact-btn">Contact Me</button>
+  <div id="contact-options" class="hidden">
+    <a href="mailto:ehmadmanzoor44@gmail.com" class="contact-option" target="_blank">Email Me</a>
+    <a href="https://wa.me/916005822652" class="contact-option" target="_blank">WhatsApp Me</a>
+  </div>
+</div>
+
 <script>
   const text = "Blending code with crypto— creating the future.Watch this space";
   const speed = 50; // typing speed in milliseconds
@@ -98,6 +107,12 @@ Web Learner • Aspiring Developer • Crypto Enthusiast</p>
   }
 
   window.onload = typeWriter;
+</script>
+<script>
+  function toggleContactOptions() {
+    const options = document.getElementById("contact-options");
+    options.classList.toggle("show");
+  }
 </script>
 
 </body>
