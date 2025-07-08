@@ -341,3 +341,17 @@ footer h2 {
     max-width: 300px;
   }
 }
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 1.7rem; /* Smaller on small phones */
+  }
+
+  .hero p,
+  #typewriter {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+  }
+}
