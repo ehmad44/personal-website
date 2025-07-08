@@ -80,12 +80,18 @@ Web Learner • Aspiring Developer • Crypto Enthusiast</p>
 </div>
 
 </footer>
-
+<!-- CONTACT  ------------------------------------------------------------>
 <div class="contact-container">
-  <button onclick="toggleContactOptions()" class="contact-btn">Contact Me</button>
+  <button class="contact-btn" onclick="toggleContactOptions()">Contact Me</button>
+
+  <!-- starts hidden -->
   <div id="contact-options" class="hidden">
-    <a href="mailto:ehmadmanzoor44@gmail.com" class="contact-option" target="_blank">Email Me</a>
-    <a href="https://wa.me/916005822652" class="contact-option" target="_blank">WhatsApp Me</a>
+    <a href="mailto:ehmadmanzoor44@gmail.com" class="contact-option" target="_blank">
+      Email Me
+    </a>
+    <a href="https://wa.me/916005822652" class="contact-option" target="_blank">
+      WhatsApp Me
+    </a>
   </div>
 </div>
 
@@ -129,6 +135,15 @@ Web Learner • Aspiring Developer • Crypto Enthusiast</p>
     const panel = document.getElementById('contact-options');
     if (!panel) { console.error('#contact-options not found'); return; }
     panel.classList.toggle('hidden');   // show/hide
+  }
+</script>
+</body>
+</html>
+<script>
+  /*   SHOW / HIDE the two contact links   */
+  function toggleContactOptions () {
+    const panel = document.getElementById('contact-options');
+    panel.classList.toggle('hidden');          // adds OR removes the class
   }
 </script>
 </body>
