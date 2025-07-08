@@ -350,7 +350,7 @@ footer h2 {
     background-color: #e0e0e0;
   }
 
-  .show {
-    display: flex;
+  .hidden {
+    display: none;
   }
 </style>
