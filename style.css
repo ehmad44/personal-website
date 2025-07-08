@@ -1,4 +1,4 @@
-/* Already existing styles – keep these */
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -18,6 +18,7 @@ img {
   border-radius: 50%;
 }
 
+/* Navigation */
 nav {
   background-color: #0077ff;
   padding: 10px 0;
@@ -47,6 +48,7 @@ nav ul li a:hover {
   color: #ffdd57;
 }
 
+/* Layout */
 main {
   max-width: 800px;
   margin: 0 auto;
@@ -75,29 +77,11 @@ a {
   border-radius: 8px;
 }
 
-/* ✅ NEW: Responsive tweaks for smaller screens */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  body {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  section {
-    margin: 10px;
-  }
-
-  a {
-    width: 100%;
-    max-width: 300px;
-  }
+a:hover {
+  background: #0056b3;
 }
+
+/* Footer */
 footer {
   margin-top: 50px;
   padding: 30px 0;
@@ -111,34 +95,8 @@ footer h2 {
   margin-bottom: 20px;
 }
 
-.hero {.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  padding: 20px;
-}
-
-.social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  max-width: 300px;
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.social-links a:hover {
-  background-color: #0056b3;
-}
-
+/* Hero section */
+.hero {
   background-image: url('herotopbackground.jpg.jpg');
   background-size: cover;
   background-position: center;
@@ -148,12 +106,11 @@ footer h2 {
   position: relative;
 }
 
-/* Optional overlay to improve text visibility */
 .hero::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -184,7 +141,6 @@ footer h2 {
   color: #f0f0f0;
 }
 
-
 .hero a {
   background-color: white;
   color: #007BFF;
@@ -198,6 +154,8 @@ footer h2 {
 .hero a:hover {
   background-color: #e0e0e0;
 }
+
+/* Typewriter effect */
 #typewriter {
   font-size: 1.3rem;
   font-style: italic;
@@ -206,6 +164,8 @@ footer h2 {
   white-space: nowrap;
   overflow: hidden;
 }
+
+/* About section */
 #about {
   padding: 60px 20px;
   background-color: #f7f7f7b8;
@@ -242,17 +202,7 @@ footer h2 {
   margin-bottom: 15px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-}
+/* Skills section */
 #skills {
   padding: 60px 20px;
   background-color: #ffffff;
@@ -284,77 +234,107 @@ footer h2 {
   color: #007BFF;
   margin-bottom: 10px;
 }
-.contact-links {
+
+/* Social links */
+.social-links {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
-  margin-top: 20px;
+  align-items: center;
+  padding: 20px;
 }
 
-.contact-links .btn {
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 300px;
   padding: 12px 20px;
   background-color: #007bff;
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  width: 200px;
-  text-align: center;
+  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
-.contact-links .btn:hover {
+.social-links a:hover {
   background-color: #0056b3;
 }
-<style>
-  .contact-container {
-    text-align: center;
-    margin: 30px 0;
-  }
 
-  .contact-btn {
-    padding: 12px 24px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+/* Contact Section */
+.contact-container {
+  text-align: center;
+  margin: 30px 0;
+}
 
-  .contact-btn:hover {
-    background-color: #0056b3;
-  }
+.contact-btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  #contact-options {
-    margin-top: 10px;
-    display: none;
+.contact-btn:hover {
+  background-color: #0056b3;
+}
+
+#contact-options {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Hidden contact panel */
+#contact-options.hidden {
+  display: none;
+}
+
+.contact-option {
+  display: block;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.contact-option:hover {
+  background-color: #e0e0e0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-container {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
 
-  .contact-option {
-    display: block;
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
+  section {
+    margin: 10px;
   }
 
-  .contact-option:hover {
-    background-color: #e0e0e0;
+  a {
+    width: 100%;
+    max-width: 300px;
   }
-
-  .hidden {
-    display: none;
-  }
-
-  hidden { display: none; }
-/* hide elements marked .hidden */
-.hidden { display: none; }
-</style>
+}
