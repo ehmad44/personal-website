@@ -97,14 +97,22 @@ footer h2 {
 
 /* Hero section */
 .hero {
-  background-image: url('herotopbackground.jpg.jpg');
+  background-image: url('herotopbackground.jpg.jpg'); /* ✅ Make sure filename matches */
   background-size: cover;
   background-position: center;
   color: white;
   padding: 100px 20px;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
+
+.hero h1 {
+  font-size: 2rem; /* 🔧 Reduce font-size on mobile */
+  margin-bottom: 10px;
+  word-wrap: break-word; /* 🛠️ ensures long names break nicely */
+}
+
 
 .hero::before {
   content: '';
@@ -127,11 +135,6 @@ footer h2 {
   border-radius: 50%;
   margin-bottom: 20px;
   border: 4px solid white;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
 }
 
 .hero p {
