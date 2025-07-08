@@ -353,7 +353,8 @@ footer h2 {
   .hidden {
     display: none;
   }
-</style>
-.hidden { display: none; }
+
+  hidden { display: none; }
 /* hide elements marked .hidden */
 .hidden { display: none; }
+</style>
