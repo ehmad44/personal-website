@@ -355,3 +355,5 @@ footer h2 {
   }
 </style>
 .hidden { display: none; }
+/* hide elements marked .hidden */
+.hidden { display: none; }
