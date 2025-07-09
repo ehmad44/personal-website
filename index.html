@@ -1,125 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MANZOOR MOHI UDDIN</title>
-
-  <!-- styles -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Manzoor Mohi Uddin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
 </head>
-
 <body>
-
-  <!-- ▸ HERO / BANNER ------------------------------------------------ -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Hello, I'm MANZOOR MOHI UDDIN</h1>
-
-      <!-- this empty <p> will be filled by the typewriter script -->
-      <p id="typewriter"></p>
-
-      <p>Web Learner • Aspiring Developer • Crypto Enthusiast</p>
-      <a href="#about">Learn More About Me</a>
+  <!-- HERO -->
+   <header id="home" class="hero">
+    <div class="overlay"></div>
+    <img class="avatar" src="Your Profile.jpg" alt="Manzoor">
+    <h1>Hello, I’m <strong>Manzoor Mohi Uddin</strong>.</h1>
+    <p class="tagline"><span id="typewriter"></span></p>
+    <div class="cta">
+      <a href="#projects" class="btn primary">Projects</a>
+      <a href="#contact"  class="btn secondary">Contact</a>
     </div>
   </header>
-  <header>
-    <img src="Your Profile.jpg" alt="Your Photo">
-  </header>
-  <!-- ▸ ABOUT -------------------------------------------------------- -->
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="about-container">
-        <div class="about-text">
-          <p>A curious mind stepping into the world of web development. I started
-             learning to code because I wanted to bring my ideas to life and
-             understand how the web works.</p>
-          <p>Right now I'm focused on HTML, CSS and JavaScript. I’m also deeply
-             interested in cryptocurrency and the intersection of tech and finance.</p>
-          <p>This site is my learning playground — and I’m excited to see where
-             this journey leads.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- ▸ SKILLS ----------------------------------------------------- -->
-    <section id="skills">
-      <h2>My Skills</h2>
-      <div class="skills-container">
-        <div class="skill-card"><h3>HTML</h3>
-          <p>Building semantic, well‑structured pages.</p></div>
+  <!-- ABOUT -->
+  <section id="about"><h2>About Me</h2><p>...</p></section>
 
-        <div class="skill-card"><h3>CSS</h3>
-          <p>Making sites responsive and visually appealing.</p></div>
+  <!-- SKILLS -->
+  <section id="skills"><h2>Skills</h2><div class="skills-grid">...</div></section>
 
-        <div class="skill-card"><h3>Git & GitHub</h3>
-          <p>Version control and collaboration workflows.</p></div>
+  <!-- PROJECTS -->
+  <section id="projects"><h2>Projects</h2><div class="card-grid">…</div></section>
 
-        <div class="skill-card"><h3>Crypto Enthusiast</h3>
-          <p>Following blockchain, DeFi and digital‑asset trends since 2017.</p></div>
-      </div>
-    </section>
+  <!-- CONTACT -->
+  <!-- CONTACT -->
+<section id="contact">
+  <h2>Get in Touch</h2>
 
-    <!-- ▸ PROJECTS ---------------------------------------------------- -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Personal Website</strong> – My first website built with HTML & CSS.</li>
-        <li><strong>Portfolio Site</strong> – Coming soon!</li>
-      </ul>
-    </section>
-  </main>
+  <!-- workable mail link -->
+  <p>
+    email:
+    <a href="mailto:you@xyz.com?subject=Hello%20Manzoor&body=Hi%20there%2C%0A%0A">
+      ehmadmanzoor44@gmail.com
+    </a>
+  </p>
+</section>
 
-  <!-- ▸ SOCIAL LINKS ------------------------------------------------- -->
   <footer>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/manzoor-mohi-uddin-229919206" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn</a>
+  <p>&copy; 2025 Manzoor Mohi Uddin</p>
 
-      <a href="https://x.com/ehmadmanzoor44" target="_blank">
-        <i class="fab fa-twitter"></i> Twitter</a>
-
-      <a href="https://github.com/ehmad44" target="_blank">
-        <i class="fab fa-github"></i> GitHub</a>
-    </div>
-  </footer>
-
-  <!-- ▸ CONTACT BUTTON ---------------------------------------------- -->
-  <div class="contact-container">
-    <button class="contact-btn" onclick="toggleContactOptions()">Contact Me</button>
-
-    <div id="contact-options" class="hidden">
-      <a href="mailto:ehmadmanzoor44@gmail.com" class="contact-option" target="_blank">
-       email</a>
-      <a href="https://wa.me/916005822652" class="contact-option" target="_blank">
-        WhatsApp</a>
-    </div>
+  <!-- new social button row -->
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/manzoor-mohi-uddin-229919206" target="_blank" class="social-btn linkedin">
+      LinkedIn
+    </a>
+    <a href="https://x.com/ehmadmanzoor44"   target="_blank" class="social-btn twitter">
+      Twitter
+    </a>
+    <a href="https://github.com/ehmad44"    target="_blank" class="social-btn github">
+      GitHub
+    </a>
   </div>
-
-  <!-- ▸ SCRIPTS ------------------------------------------------------ -->
-  <script>
-    /* type‑writer effect */
-    const text      = "Blending code with crypto— creating the future. Watch this space";
-    const speed     = 50;
-    let   i         = 0;
-
-    function typeWriter () {
-      if (i < text.length) {
-        document.getElementById("typewriter").textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    window.onload = typeWriter;
-
-    /* show / hide contact links */
-    function toggleContactOptions () {
-      const panel = document.getElementById('contact-options');
-      panel.classList.toggle('hidden');
-    }
-  </script>
+</footer>
+   
+  <script src="script.js"></script>
 </body>
 </html>
