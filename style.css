@@ -168,13 +168,15 @@ body::after {
 .social-btn {
   display: inline-flex;
   align-items: center;
-  padding: 10px 22px;
-  border-radius: 30px;
-  font-weight: 600;
+  padding: 6px 16px;       /* smaller padding */
+  border-radius: 24px;     /* slightly smaller corners */
+  font-size: 0.9rem;       /* smaller text */
+  font-weight: 500;
   text-decoration: none;
   transition: opacity 0.25s;
   color: #fff;
 }
+
 
 .social-btn:hover {
   opacity: 0.85;
