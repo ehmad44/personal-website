@@ -5,10 +5,15 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   color: #222;
   scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
 h1, h2 {
@@ -53,6 +58,7 @@ body::after {
   min-height: 70vh;
   position: relative;
   text-align: center;
+  padding: 60px 20px;
 }
 
 .hero .overlay {
@@ -73,7 +79,30 @@ body::after {
   margin-bottom: 20px;
 }
 
-/* HERO BUTTONS (Top-right) */
+.hero h1 {
+  font-size: 2.5rem;
+  margin-top: 12px;
+  line-height: 1.2;
+}
+
+.tagline {
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.subtagline {
+  margin-top: 1.8rem;
+  font-size: 1.5rem;
+  color: #00bfffc3;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* HERO BUTTONS */
 .hero-buttons {
   position: absolute;
   top: 20px;
@@ -83,7 +112,7 @@ body::after {
   z-index: 1;
 }
 
-/* BUTTON STYLES */
+/* BUTTONS */
 .btn {
   padding: 12px 26px;
   border-radius: 30px;
@@ -112,27 +141,7 @@ body::after {
   color: #fff;
 }
 
-/* TAGLINES */
-.tagline {
-  margin-top: 1.2rem;
-  margin-bottom: 1rem;
-  font-style: italic;
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
-.subtagline {
-  margin-top: 1.8rem;
-  font-size: 1.5rem;
-  color: #00bfff;
-  text-align: center;
-  font-weight: 600;
-  font-style: italic;
-  letter-spacing: 0.5px;
-}
-
-/* SKILLS & PROJECT CARDS */
+/* CARDS */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -184,35 +193,23 @@ body::after {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 600px) {
-  .hero {
-    padding: 40px 20px;
-  }
-
+@media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
   }
 
   .tagline {
     font-size: 1.1rem;
-    margin-bottom: 0.8rem;
   }
 
   .subtagline {
     font-size: 1.2rem;
-    margin-top: 1.2rem;
     padding: 0 12px;
   }
 
-  .hero img {
-    width: 160px;
-    height: 160px;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
+  .avatar {
+    width: 180px;
+    height: 180px;
   }
 
   .hero-buttons {
@@ -220,6 +217,12 @@ body::after {
     align-items: flex-end;
     top: 16px;
     right: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
   }
 }
 
