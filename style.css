@@ -1,103 +1,207 @@
-/* base */
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;color:#222;scroll-behavior:smooth}
-h1,h2{font-family:'Playfair Display',serif}
-section{padding:80px 20px;max-width:960px;margin:auto;text-align:center}
-
-/* gradient top+bottom */
-body::before,body::after{
-  content:"";position:fixed;left:0;right:0;height:30vh;pointer-events:none;z-index:-1}
-body::before{top:0;background:linear-gradient(180deg,#FFE9E5 0%,transparent 100%)}
-body::after{bottom:0;background:linear-gradient(0deg,#FFE9E5 0%,transparent 100%)}
-
-/* hero */
-.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:70vh;position:relative;text-align:center}
-.hero .overlay{position:absolute;inset:0;background:url(background.jpg) center/cover no-repeat;filter:blur(4px);z-index:-2}
-.avatar{width:140px;height:140px;border-radius:50%;border:4px solid #fff;margin-bottom:20px;object-fit:cover}
-.tagline{margin-top:10px;font-style:italic}
-
-/* buttons */
-.btn{padding:12px 26px;border-radius:30px;font-weight:600;text-decoration:none;transition:.3s}
-.primary{background:#007BFF;color:#fff}.primary:hover{background:#0056b3}
-.secondary{border:2px solid #007BFF;color:#007BFF}.secondary:hover{background:#007BFF;color:#fff}
-
-/* skills cards, project cards etc… */
-.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.card{background:#fff;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,.08);padding:24px;text-align:left}
-
-/* tagline spacing */
-.tagline{
-  margin-top:1rem;      /* space below heading */
-  margin-bottom:0;      /* remove extra default space */
-  font-style:italic;
-  text-align:center;
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* button group */
-.cta{
-  display:flex;
-  gap:20px;             /* space between the two buttons */
-  margin-top:1.6rem;    /* ← adds clear space under the tagline */
-  flex-wrap:wrap;       /* keeps them centred on narrow screens */
-  justify-content:center;
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  scroll-behavior: smooth;
 }
 
-/* buttons (keep the ones you already have, just ensure they’re inline‑block) */
-.btn{
-  display:inline-block; /* prevents collision with text */
-  padding:12px 26px;
-  border-radius:30px;
-  font-weight:600;
-  text-decoration:none;
-  transition:.3s;
-}
-/* --- footer social buttons --- */
-.social-links{
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  margin-top:1rem;
-  flex-wrap:wrap;           /* keeps them centered on narrow screens */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
 }
 
-.social-btn{
-  display:inline-flex;
-  align-items:center;
-  padding:10px 22px;
-  border-radius:30px;
-  font-weight:600;
-  text-decoration:none;
-  transition:opacity .25s;
-  color:#fff;
+section {
+  padding: 80px 20px;
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
 }
 
-.social-btn:hover{opacity:.85}
+/* GRADIENT BACKGROUND */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 30vh;
+  pointer-events: none;
+  z-index: -1;
+}
 
-/* brand colours */
-.linkedin{background:#0a66c2}
-.twitter {background:#1da1f2}
-.github  {background:#333}
+body::before {
+  top: 0;
+  background: linear-gradient(180deg, #FFE9E5 0%, transparent 100%);
+}
 
-.hero img {
-  width: 240px;        /* increase this */
-  height: 240px;       /* and this */
+body::after {
+  bottom: 0;
+  background: linear-gradient(0deg, #FFE9E5 0%, transparent 100%);
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  position: relative;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: url(background.jpg) center/cover no-repeat;
+  filter: blur(4px);
+  z-index: -2;
+}
+
+.avatar {
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
-  object-fit: cover;
   border: 4px solid white;
+  object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
 }
+
+/* HERO BUTTONS (Top-right) */
+.hero-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 1;
+}
+
+/* BUTTON STYLES */
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.primary {
+  background: #007BFF;
+  color: #fff;
+}
+
+.primary:hover {
+  background: #0056b3;
+}
+
+.secondary {
+  border: 2px solid #007BFF;
+  color: #007BFF;
+}
+
+.secondary:hover {
+  background: #007BFF;
+  color: #fff;
+}
+
+/* TAGLINES */
+.tagline {
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.subtagline {
+  margin-top: 1.8rem;
+  font-size: 1.5rem;
+  color: #00bfff;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* SKILLS & PROJECT CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  text-align: left;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.25s;
+  color: #fff;
+}
+
+.social-btn:hover {
+  opacity: 0.85;
+}
+
+.linkedin {
+  background: #0a66c2;
+}
+
+.twitter {
+  background: #1da1f2;
+}
+
+.github {
+  background: #333;
+}
+
+/* RESPONSIVE DESIGN */
 @media (max-width: 600px) {
   .hero {
     padding: 40px 20px;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .tagline {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .subtagline {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    padding: 0 12px;
   }
 
   .hero img {
@@ -105,15 +209,17 @@ body::after{bottom:0;background:linear-gradient(0deg,#FFE9E5 0%,transparent 100%
     height: 160px;
   }
 
-  .cta {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .btn {
     width: 100%;
     max-width: 280px;
     text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+    top: 16px;
+    right: 16px;
   }
 }
 
