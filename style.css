@@ -89,16 +89,16 @@ body::after {
   margin-top: 1.2rem;
   margin-bottom: 1rem;
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
 .subtagline {
   margin-top: 1.8rem;
   font-size: 1.5rem;
-  color: #00bfffc3;
+  color: #007bffab;
   font-weight: 600;
-  font-style: italic;
+  font-style: inherit;
   letter-spacing: 0.5px;
 }
 
