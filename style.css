@@ -64,7 +64,7 @@ body::after {
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background: url(background.jpg) center/cover no-repeat;
+  background: url(heroprofile.jpeg) center/cover no-repeat;
   filter: blur(4px);
   z-index: -2;
 }
